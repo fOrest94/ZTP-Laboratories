@@ -6,30 +6,26 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by f0rest94 on 2017-03-06.
  */
-@WebServlet("/main")
+@WebServlet
 public class MainController extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
         response.setCharacterEncoding("UTF-8");
 
         try {
-            Double value1 = Double.valueOf(request.getParameter("value1"));
-            Double value2 = Double.valueOf(request.getParameter("value2"));
+            Double v1 = Double.valueOf(request.getParameter("value1"));
+            Double v2 = Double.valueOf(request.getParameter("value2"));
             String method = request.getParameter("value3");
-
             Calculator calculator = new Calculator();
-
-            request.setAttribute("error", "");
-            request.setAttribute("result", calculator.getResult(value1, value2, method));
-            request.getRequestDispatcher("/result.jsp").forward(request, response);
+            out.write(String.format("%.2f %s %.2f = %.2f", v1, method, v2, calculator.getResult(v1, v2, method)));
 
         } catch (NumberFormatException e) {
             throw new NumberFormatException("Only real numbers are allowed");

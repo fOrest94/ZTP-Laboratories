@@ -7,7 +7,7 @@
 <body>
 <h1>Fill form located below</h1>
 <h3>Get</h3>
-<form action="/main" method="get">
+<form action="/result" method="post">
     Number:<input type="text" name="value1"> <br>
     Method :<input type="radio" name="value3" value="+"> +
     <input type="radio" name="value3" value="-"> -
