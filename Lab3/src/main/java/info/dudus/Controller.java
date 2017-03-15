@@ -1,7 +1,7 @@
 package info.dudus;
 
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +13,6 @@ import java.io.OutputStream;
 /**
  * Created by f0rest94 on 2017-03-06.
  */
-@WebServlet("/main")
 public class Controller extends HttpServlet {
 
     private static final long serialVersionUID = 1L;

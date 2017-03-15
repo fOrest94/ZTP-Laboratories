@@ -6,12 +6,12 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>jsp1</servlet-name>
-    <jsp-file>/index.jsp</jsp-file>
+    <servlet-name>servlet</servlet-name>
+    <servlet-class>info.dudus.Controller</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>jsp1</servlet-name>
-    <url-pattern>/jsp1</url-pattern>
+    <servlet-name>servlet</servlet-name>
+    <url-pattern>/picture</url-pattern>
   </servlet-mapping>
 </web-app>

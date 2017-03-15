@@ -8,7 +8,7 @@
 <h1>Fill form located below</h1>
 <h3>Homie, what continent you wanna see?</h3>
 <h4>Take your pig</h4>
-<form action="/main" method="post">
+<form action="/picture" method="post">
     <input type="radio" name="picture" value="1"> Europa
     <input type="radio" name="picture" value="2"> North America
     <input type="radio" name="picture" value="3"> South America
