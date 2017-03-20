@@ -11,6 +11,9 @@ public class Main {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("POST");
             con.setDoOutput(true);
+            System.out.println("sadsadasdas    "+args[1]);
+            if(args[1].equals("+"))
+                args[1] = "%2B";
             String param = "value1=" + args[0] + "&value2=" + args[2] + "&value3=" + args[1];
             byte[] postData = param.getBytes(StandardCharsets.UTF_8);
             con.setRequestProperty("Content-Length", Integer.toString(postData.length));
